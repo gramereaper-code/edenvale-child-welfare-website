@@ -1,0 +1,5 @@
+.superdesign
+.env
+.env.*
+!.env.example
+*.log

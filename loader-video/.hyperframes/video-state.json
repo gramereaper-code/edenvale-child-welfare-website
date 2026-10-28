@@ -1,0 +1,621 @@
+{
+  "version": 1,
+  "historyId": "3a97f522-eb63-469a-8579-986a9f45063d",
+  "currentRevision": "67fa075b-db54-4c52-8802-04f7b7b85a5c",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\1b\\1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "CLAUDE.md": {
+      "hash": "1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\1b\\1b36171117cb7c18f4100a0db6a3782ff2e096115995733200445cc2e80a4060"
+    },
+    "assets/edenvale-logo.png": {
+      "hash": "51ddf1397ae3e60098eb1cad7ae2362d87c585b357dccf2871e8549264c03941",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\51\\51ddf1397ae3e60098eb1cad7ae2362d87c585b357dccf2871e8549264c03941"
+    },
+    "compositions/components/svg-stroke-trace.html": {
+      "hash": "9c57b095e28781e988a9b0ab5b077951fbe9ca2d6d46ee4ccb796502ced62ecd",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\9c\\9c57b095e28781e988a9b0ab5b077951fbe9ca2d6d46ee4ccb796502ced62ecd"
+    },
+    "hyperframes.json": {
+      "hash": "bb644a48ef4448dfc721659407a4da5994c014831946ea425c9a96244272ea6b",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\bb\\bb644a48ef4448dfc721659407a4da5994c014831946ea425c9a96244272ea6b"
+    },
+    "hyperframes.lock.json": {
+      "hash": "b930f3ca9d602c6c1c55639eff0d37424707b754110d44f7d990ec08c492d46a",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\b9\\b930f3ca9d602c6c1c55639eff0d37424707b754110d44f7d990ec08c492d46a"
+    },
+    "index.html": {
+      "hash": "6bd0352d214200d50adecae1df0d1ee593244ac4cd9abacc6bdf89ad3b828c84",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\6b\\6bd0352d214200d50adecae1df0d1ee593244ac4cd9abacc6bdf89ad3b828c84"
+    },
+    "meta.json": {
+      "hash": "b8fb27cda1fa8f89dfcb36cb46d40a95ce6178449431997b87eba6803020d94b",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\b8\\b8fb27cda1fa8f89dfcb36cb46d40a95ce6178449431997b87eba6803020d94b"
+    },
+    "package.json": {
+      "hash": "f8591fd640cace7b617e97ac71068a1bd65bc2687fc15be8786cf3a42ad794b0",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\f8\\f8591fd640cace7b617e97ac71068a1bd65bc2687fc15be8786cf3a42ad794b0"
+    },
+    "index.motion.json": {
+      "hash": "e91ea9c9ee76a132c6fe87eb319c0c1432d36ff7c15a93ba985d82cec46c66e3",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\e9\\e91ea9c9ee76a132c6fe87eb319c0c1432d36ff7c15a93ba985d82cec46c66e3"
+    },
+    "snapshots/contact-sheet.jpg": {
+      "hash": "41d8630388435e9b3383efe8f2cbe69cce1b3fd2cd2164ceeb021aed9157569c",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\41\\41d8630388435e9b3383efe8f2cbe69cce1b3fd2cd2164ceeb021aed9157569c"
+    },
+    "snapshots/frame-00-at-0s.png": {
+      "hash": "0103be05f30a7b75ec49380073a5ee4bffab8ac1df89d3ec9d3d2467abd1c152",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\01\\0103be05f30a7b75ec49380073a5ee4bffab8ac1df89d3ec9d3d2467abd1c152"
+    },
+    "snapshots/frame-01-at-0.9s.png": {
+      "hash": "e10c9fe133c4a3a5a8d9be142bf571df227d2c4c60abd0742ab9e4028d709540",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\e1\\e10c9fe133c4a3a5a8d9be142bf571df227d2c4c60abd0742ab9e4028d709540"
+    },
+    "snapshots/frame-02-at-1.3s.png": {
+      "hash": "3b5d85741b9d703b3728a7cf95c9957d09ce6f5cea9d77a217b24326bf08a029",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\3b\\3b5d85741b9d703b3728a7cf95c9957d09ce6f5cea9d77a217b24326bf08a029"
+    },
+    "snapshots/frame-03-at-1.9s.png": {
+      "hash": "2c944310add6f3383ed232bc8995ccbbad32782d0d8bf837e2da4cfaaf7be674",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\2c\\2c944310add6f3383ed232bc8995ccbbad32782d0d8bf837e2da4cfaaf7be674"
+    },
+    "snapshots/frame-04-at-2.7s.png": {
+      "hash": "9442380c2379e4ce475c602f3b1642478e949b41ca158e13d5069aafc9163cf7",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\94\\9442380c2379e4ce475c602f3b1642478e949b41ca158e13d5069aafc9163cf7"
+    },
+    "snapshots/frame-05-at-3.6s.png": {
+      "hash": "a6d4ef5432b5c2006971d01a9a89ac967bbd0cf584773cc053f9b7eca2123f5e",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\a6\\a6d4ef5432b5c2006971d01a9a89ac967bbd0cf584773cc053f9b7eca2123f5e"
+    },
+    "snapshots/frame-06-at-3.88s.png": {
+      "hash": "354b3ddf4d8fc62ce79bb613ba663fd7ebed984a5e93a7acd10b9afc8619cc2c",
+      "content": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\35\\354b3ddf4d8fc62ce79bb613ba663fd7ebed984a5e93a7acd10b9afc8619cc2c"
+    }
+  },
+  "revisions": {
+    "821e7f6e-46dc-4f84-a682-644874f51c3b": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792780730461,
+      "endedAt": 1792780730466,
+      "files": {
+        "index.html": {
+          "before": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\77\\77860387e4099a97a933781c866d4a2409a346f2f0a7dde08fb7c7d209084725",
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\c2\\c225eb4f7818f4a72f0b997b219e69619d3c932a239779c974c0a8d82f85af2b"
+        }
+      }
+    },
+    "fdbdacc9-eaed-47df-a5cb-368feb97f58b": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792929472041,
+      "endedAt": 1792929472061,
+      "files": {
+        "index.html": {
+          "before": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\c2\\c225eb4f7818f4a72f0b997b219e69619d3c932a239779c974c0a8d82f85af2b",
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\f2\\f2ed84bab1a1a5c8a68f928c964e33b57ad6d218c8629d121d8d4eb7e8943649"
+        },
+        "index.motion.json": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\e9\\e91ea9c9ee76a132c6fe87eb319c0c1432d36ff7c15a93ba985d82cec46c66e3"
+        }
+      }
+    },
+    "4222307b-d606-4296-8e3f-622b2a6a4bc0": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792929536057,
+      "endedAt": 1792929536065,
+      "files": {
+        "index.html": {
+          "before": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\f2\\f2ed84bab1a1a5c8a68f928c964e33b57ad6d218c8629d121d8d4eb7e8943649",
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\6b\\6bd0352d214200d50adecae1df0d1ee593244ac4cd9abacc6bdf89ad3b828c84"
+        }
+      }
+    },
+    "67fa075b-db54-4c52-8802-04f7b7b85a5c": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792929708331,
+      "endedAt": 1792929708500,
+      "files": {
+        "snapshots/contact-sheet.jpg": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\41\\41d8630388435e9b3383efe8f2cbe69cce1b3fd2cd2164ceeb021aed9157569c"
+        },
+        "snapshots/frame-00-at-0s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\01\\0103be05f30a7b75ec49380073a5ee4bffab8ac1df89d3ec9d3d2467abd1c152"
+        },
+        "snapshots/frame-01-at-0.9s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\e1\\e10c9fe133c4a3a5a8d9be142bf571df227d2c4c60abd0742ab9e4028d709540"
+        },
+        "snapshots/frame-02-at-1.3s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\3b\\3b5d85741b9d703b3728a7cf95c9957d09ce6f5cea9d77a217b24326bf08a029"
+        },
+        "snapshots/frame-03-at-1.9s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\2c\\2c944310add6f3383ed232bc8995ccbbad32782d0d8bf837e2da4cfaaf7be674"
+        },
+        "snapshots/frame-04-at-2.7s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\94\\9442380c2379e4ce475c602f3b1642478e949b41ca158e13d5069aafc9163cf7"
+        },
+        "snapshots/frame-05-at-3.6s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\a6\\a6d4ef5432b5c2006971d01a9a89ac967bbd0cf584773cc053f9b7eca2123f5e"
+        },
+        "snapshots/frame-06-at-3.88s.png": {
+          "before": null,
+          "after": "C:\\Users\\dicky\\.cache\\hyperframes\\history\\3a97f522-eb63-469a-8579-986a9f45063d\\blobs\\35\\354b3ddf4d8fc62ce79bb613ba663fd7ebed984a5e93a7acd10b9afc8619cc2c"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+      "id": "263ac47e-d1e3-4919-b4b1-316fdc1d4039"
+    },
+    "revisions": {
+      "821e7f6e-46dc-4f84-a682-644874f51c3b": [
+        {
+          "id": "263ac47e-d1e3-4919-b4b1-316fdc1d4039",
+          "scope": "project",
+          "report": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\checks\\263ac47e-d1e3-4919-b4b1-316fdc1d4039.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792780737358,
+          "contentHash": "07f3f7c398dbb1d04794d314fea0bf0302559485fab28fed35481ca5244be7da",
+          "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+          "inputFingerprint": "d821469c0fc32205b572d7b1b87d57f261b3dca95f4b8a265cd49d9cfd7c7bb1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "fdbdacc9-eaed-47df-a5cb-368feb97f58b": [
+        {
+          "id": "26ff8896-4b63-454a-a46d-ed4c42133b40",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792929493771,
+          "contentHash": "e22f9fd5f9e2fe85a52c8d921d9c2d846b0a51712ed6f5675c812767dd4acb1e",
+          "revision": "fdbdacc9-eaed-47df-a5cb-368feb97f58b",
+          "inputFingerprint": "83e9a6fdcce0945d99dc3992ebac600e7d2552a0e6c27a17d95d899079246bd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "c94bd832-2efb-4806-a872-a790413a3253"
+        },
+        {
+          "id": "c69f587f-c247-405e-8ab0-06058b59ec30",
+          "scope": "project",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": true,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792929502906,
+          "contentHash": "5509266689d111e0c5531121acd0ecb82dc2a403ff51b45f0241b7919a4d5d4b",
+          "revision": "fdbdacc9-eaed-47df-a5cb-368feb97f58b",
+          "inputFingerprint": "83e9a6fdcce0945d99dc3992ebac600e7d2552a0e6c27a17d95d899079246bd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "c94bd832-2efb-4806-a872-a790413a3253"
+        }
+      ],
+      "4222307b-d606-4296-8e3f-622b2a6a4bc0": [
+        {
+          "id": "fdf9d27a-3b95-4c96-8642-4f4904a47ad0",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": true,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792929543865,
+          "contentHash": "de80de7d8ae7468bf4c3766a8c0a78e4e774b1235a4fa77590a214217f43fe46",
+          "revision": "4222307b-d606-4296-8e3f-622b2a6a4bc0",
+          "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "c94bd832-2efb-4806-a872-a790413a3253"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "2fbabc40-9136-4ea8-8e77-24edcb19d45a",
+        "scope": "project",
+        "report": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\checks\\2fbabc40-9136-4ea8-8e77-24edcb19d45a.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792780644964,
+        "contentHash": "be8533184b5623f67f3fb712ba02489b77d72f7a9a6a20ed3f6b8d71cd69f3a0",
+        "revision": null,
+        "inputFingerprint": "b90e672f019ff10e4febc22a2206da3cf54f3cbbd73a99f3afc1a1880009feaa",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "db09002f-133b-46bb-ad2b-fe20894fec29",
+        "scope": "project",
+        "report": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\checks\\db09002f-133b-46bb-ad2b-fe20894fec29.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792780690706,
+        "contentHash": "be8533184b5623f67f3fb712ba02489b77d72f7a9a6a20ed3f6b8d71cd69f3a0",
+        "revision": null,
+        "inputFingerprint": "b90e672f019ff10e4febc22a2206da3cf54f3cbbd73a99f3afc1a1880009feaa",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": null,
+      "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-6"
+    },
+    "revisions": {
+      "821e7f6e-46dc-4f84-a682-644874f51c3b": [
+        {
+          "scope": "full",
+          "id": "42126112-fa92-41de-9005-634b77266c43-0",
+          "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\snapshots\\b4420833-44d9-41fe-95c8-d9b821141b2b\\frame-00-at-0.6s.png",
+          "time": 0.6,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792780753102,
+          "contentHash": "3e422887dd445606aec01422586f751883e3699b556bfd675242d5cd545e4ab0",
+          "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+          "inputFingerprint": "d821469c0fc32205b572d7b1b87d57f261b3dca95f4b8a265cd49d9cfd7c7bb1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "42126112-fa92-41de-9005-634b77266c43-1",
+          "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\snapshots\\b4420833-44d9-41fe-95c8-d9b821141b2b\\frame-01-at-1.3s.png",
+          "time": 1.3,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792780753103,
+          "contentHash": "b53b7b98c0c20af49043e742c24366fd35303603c077bc74b71c8e0c7a338b5e",
+          "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+          "inputFingerprint": "d821469c0fc32205b572d7b1b87d57f261b3dca95f4b8a265cd49d9cfd7c7bb1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "42126112-fa92-41de-9005-634b77266c43-2",
+          "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\snapshots\\b4420833-44d9-41fe-95c8-d9b821141b2b\\frame-02-at-2.3s.png",
+          "time": 2.3,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792780753103,
+          "contentHash": "e171e9d310e66a98e5f81647806f03f453c8d35e3162f894c674946305b39052",
+          "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+          "inputFingerprint": "d821469c0fc32205b572d7b1b87d57f261b3dca95f4b8a265cd49d9cfd7c7bb1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "42126112-fa92-41de-9005-634b77266c43-3",
+          "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\snapshots\\b4420833-44d9-41fe-95c8-d9b821141b2b\\frame-03-at-3.8s.png",
+          "time": 3.8,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792780753104,
+          "contentHash": "9cb9b633d308848d8e7605a45cf36d210dc6c520c9875b0b9badbda8e58c61f3",
+          "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+          "inputFingerprint": "d821469c0fc32205b572d7b1b87d57f261b3dca95f4b8a265cd49d9cfd7c7bb1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "42126112-fa92-41de-9005-634b77266c43-4",
+          "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\.hyperframes\\artifacts\\snapshots\\b4420833-44d9-41fe-95c8-d9b821141b2b\\frame-04-at-3.88s.png",
+          "time": 3.88,
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792780753104,
+          "contentHash": "98d7ee3a74f0121d922dcd1fa95fa021695c1630406d22281c815b88989d8af1",
+          "revision": "821e7f6e-46dc-4f84-a682-644874f51c3b",
+          "inputFingerprint": "d821469c0fc32205b572d7b1b87d57f261b3dca95f4b8a265cd49d9cfd7c7bb1",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-0",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-00-at-0s.png",
+        "time": 0,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929558994,
+        "contentHash": "0103be05f30a7b75ec49380073a5ee4bffab8ac1df89d3ec9d3d2467abd1c152",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-1",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-01-at-0.9s.png",
+        "time": 0.9,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929558998,
+        "contentHash": "e10c9fe133c4a3a5a8d9be142bf571df227d2c4c60abd0742ab9e4028d709540",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-2",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-02-at-1.3s.png",
+        "time": 1.3,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929559000,
+        "contentHash": "3b5d85741b9d703b3728a7cf95c9957d09ce6f5cea9d77a217b24326bf08a029",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-3",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-03-at-1.9s.png",
+        "time": 1.9,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929559001,
+        "contentHash": "2c944310add6f3383ed232bc8995ccbbad32782d0d8bf837e2da4cfaaf7be674",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-4",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-04-at-2.7s.png",
+        "time": 2.7,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929559002,
+        "contentHash": "9442380c2379e4ce475c602f3b1642478e949b41ca158e13d5069aafc9163cf7",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-5",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-05-at-3.6s.png",
+        "time": 3.6,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929559004,
+        "contentHash": "a6d4ef5432b5c2006971d01a9a89ac967bbd0cf584773cc053f9b7eca2123f5e",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      },
+      {
+        "scope": "full",
+        "id": "49e233bb-5187-4e6b-9165-6c68385d0f03-6",
+        "image": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\snapshots\\frame-06-at-3.88s.png",
+        "time": 3.88,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1792929559005,
+        "contentHash": "354b3ddf4d8fc62ce79bb613ba663fd7ebed984a5e93a7acd10b9afc8619cc2c",
+        "revision": null,
+        "inputFingerprint": "4dfb3efaf3a87091e2b64a0741523e896476e1f914a4f61b6c2895c72507c512",
+        "inputScope": "local-project-files",
+        "attribution": "inputs-changed"
+      }
+    ]
+  },
+  "renders": {
+    "latest": {
+      "id": "c94bd832-2efb-4806-a872-a790413a3253",
+      "completedAt": 1792929729660,
+      "output": "C:\\Users\\dicky\\OneDrive\\Documents\\www.edenvalechildwelfare.co.za\\loader-video\\renders\\edenvale-loader-native.mp4",
+      "status": "completed",
+      "revision": "67fa075b-db54-4c52-8802-04f7b7b85a5c"
+    },
+    "retainedRevisions": [
+      "67fa075b-db54-4c52-8802-04f7b7b85a5c",
+      "821e7f6e-46dc-4f84-a682-644874f51c3b"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

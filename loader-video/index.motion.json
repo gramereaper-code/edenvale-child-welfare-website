@@ -1,0 +1,11 @@
+{
+  "duration": 4,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#yellow-head", "bySec": 1.25 },
+    { "kind": "before", "a": "#blue-strip-fill", "b": "#blue-dot" },
+    { "kind": "before", "a": "#blue-dot", "b": "#purple-dot" },
+    { "kind": "before", "a": "#purple-dot", "b": "#wordmark-group" },
+    { "kind": "staysInFrame", "selector": "#logo-svg" },
+    { "kind": "keepsMoving", "withinSelector": "#logo-scene", "maxStaticSec": 1.5 }
+  ]
+}

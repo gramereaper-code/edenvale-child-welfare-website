@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Edenvale Child Welfare — Logo Loader</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root { --blue-deep: #063984; --blue: #0c4fb1; --blue-light: #4389f6; --mark-blue: #06469e; --purple: #5a0a70; --yellow: #f6b511; --white: #fff; }
+      * { box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: var(--blue-deep); }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 69% 50%, rgba(95, 157, 255, .34), transparent 46%), linear-gradient(112deg, var(--blue-deep) 0%, var(--blue) 53%, var(--blue-light) 100%); }
+      .clip { position: absolute; inset: 0; overflow: hidden; }
+      #white-field { position: absolute; top: 50%; left: 50%; width: 2040px; height: 650px; border-radius: 50%; transform: translate(-50%, -50%); background: var(--white); }
+      #logo-scene { position: absolute; inset: 0; display: grid; place-items: center; }
+      #logo-svg { width: 850px; height: auto; overflow: visible; }
+      #wordmark-source, #final-lockup-source { transform-box: fill-box; transform-origin: center; }
+      #blue-strip-trace, #yellow-orbit { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      #blue-strip-trace { stroke: var(--mark-blue); stroke-width: 14; }
+      #yellow-orbit { stroke: var(--yellow); stroke-width: 4; }
+      #blue-strip-fill { fill: var(--mark-blue); }
+      #yellow-head, #yellow-block, #yellow-dot { fill: var(--yellow); }
+      #blue-dot { fill: var(--mark-blue); }
+      #purple-dot, #purple-block { fill: var(--purple); }
+    </style>
+  </head>
+  <body>
+    <main id="root" data-composition-id="main" data-start="0" data-duration="4" data-width="1920" data-height="1080" data-fps="30" aria-label="Edenvale Child Welfare logo animation">
+      <div id="white-field" data-layout-allow-overflow="true" aria-hidden="true"></div>
+      <div id="logo-scene">
+        <svg id="logo-svg" viewBox="0 0 310 100" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Child Welfare South Africa Edenvale logo">
+          <defs><clipPath id="wordmark-crop"><rect x="94" y="8" width="216" height="85"></rect></clipPath></defs>
+          <g id="brand-frame">
+            <g id="constructed-mark">
+              <path id="blue-strip-trace" d="M 58 89 C 29 82 9 68 11 53 C 14 38 28 33 43 33 C 60 33 77 41 91 53"></path>
+              <path id="blue-strip-fill" d="M 58 89 C 29 82 9 68 11 53 C 14 38 28 33 43 33 C 60 33 77 41 91 53 C 73 42 57 40 40 42 C 28 43 22 47 22 54 C 22 65 37 75 58 80 Z"></path>
+              <circle id="yellow-orbit" cx="27" cy="18" r="18"></circle>
+              <circle id="yellow-head" cx="27" cy="18" r="12.5"></circle>
+              <circle id="blue-dot" cx="42" cy="58" r="6.5"></circle>
+              <circle id="purple-dot" cx="58" cy="61" r="8"></circle>
+              <circle id="yellow-dot" cx="75" cy="63" r="7.5"></circle>
+              <rect id="yellow-block" x="51" y="74" width="13" height="18" rx="1"></rect>
+              <rect id="purple-block" x="69" y="77" width="13" height="16" rx="1"></rect>
+            </g>
+            <g id="wordmark-group" clip-path="url(#wordmark-crop)">
+              <image id="wordmark-source" href="assets/edenvale-logo.png" x="0" y="0" width="310" height="100" preserveAspectRatio="none"></image>
+            </g>
+            <image id="final-lockup-source" href="assets/edenvale-logo.png" x="0" y="0" width="310" height="100" preserveAspectRatio="none"></image>
+          </g>
+        </svg>
+      </div>
+    </main>
+    <script>
+      (function () {
+        "use strict";
+        var blueTrace = document.getElementById("blue-strip-trace");
+        var yellowOrbit = document.getElementById("yellow-orbit");
+        var blueFill = document.getElementById("blue-strip-fill");
+        var yellowHead = document.getElementById("yellow-head");
+        var blueDot = document.getElementById("blue-dot");
+        var purpleDot = document.getElementById("purple-dot");
+        var yellowDot = document.getElementById("yellow-dot");
+        var yellowBlock = document.getElementById("yellow-block");
+        var purpleBlock = document.getElementById("purple-block");
+        var wordmark = document.getElementById("wordmark-group");
+        var finalLockup = document.getElementById("final-lockup-source");
+        var brandFrame = document.getElementById("brand-frame");
+        function prepareStroke(path) { var length = path.getTotalLength(); path.style.strokeDasharray = length + " " + length; path.style.strokeDashoffset = String(length); }
+        function landing(timeline, target, fromX, fromY, start, duration) {
+          timeline.fromTo(target, { x: fromX, y: fromY, scale: 0.2, opacity: 0 }, { x: 0, y: 4, scale: 1.05, opacity: 1, duration: duration, ease: "power3.out" }, start);
+          timeline.to(target, { y: 0, scale: 1, duration: 0.13, ease: "power2.inOut" }, start + duration);
+        }
+        function hopFromHead(timeline, target, fromX, fromY, start) {
+          timeline.fromTo(target, { x: fromX, y: fromY, scale: 0.16, opacity: 0 }, { x: 0, y: 10, scale: 1.08, opacity: 1, duration: 0.36, ease: "power3.out" }, start);
+          timeline.to(target, { y: 0, scale: 1, duration: 0.16, ease: "power2.inOut" }, start + 0.36);
+        }
+        prepareStroke(blueTrace);
+        prepareStroke(yellowOrbit);
+        gsap.set([blueFill, yellowHead, blueDot, purpleDot, yellowDot, yellowBlock, purpleBlock, wordmark, finalLockup], { opacity: 0 });
+        gsap.set([blueTrace, yellowOrbit], { transformOrigin: "50% 50%" });
+        var tl = gsap.timeline({ paused: true });
+        tl.to(blueTrace, { strokeDashoffset: 0, duration: 0.75, ease: "power2.out" }, 0.20);
+        tl.to(blueFill, { opacity: 1, duration: 0.16, ease: "power1.out" }, 0.76);
+        tl.to(yellowOrbit, { strokeDashoffset: 0, duration: 0.32, ease: "power2.out" }, 0.55);
+        tl.to(yellowOrbit, { rotation: 500, svgOrigin: "27 18", duration: 0.60, ease: "power2.out" }, 0.55);
+        tl.fromTo(yellowHead, { scale: 0.1, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.34, ease: "power3.out" }, 0.98);
+        tl.to(yellowOrbit, { opacity: 0, duration: 0.12, ease: "power1.out" }, 1.08);
+        landing(tl, blueDot, -15, -11, 1.10, 0.20);
+        landing(tl, purpleDot, -31, -43, 1.30, 0.22);
+        landing(tl, yellowBlock, 0, -27, 1.55, 0.22);
+        landing(tl, purpleBlock, 0, -28, 1.63, 0.22);
+        hopFromHead(tl, purpleDot, -31, -43, 1.69);
+        hopFromHead(tl, yellowDot, -48, -45, 1.78);
+        tl.fromTo(wordmark, { x: 10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.50, ease: "power2.out" }, 2.15);
+        tl.to(finalLockup, { opacity: 1, duration: 0.16, ease: "power1.out" }, 2.49);
+        tl.to(brandFrame, { opacity: 0, duration: 0.47, ease: "power2.in" }, 3.45);
+        window.__timelines = window.__timelines || {};
+        window.__timelines.main = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

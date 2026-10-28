@@ -1,0 +1,431 @@
+/* top bar */
+#sp-top3 .sp-module {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+#sp-topbar {
+	background-color: rgba(0,0,0,0.3);
+	position: sticky;
+	z-index: 100;
+}
+
+/* Menu */
+
+#sp-header {
+	background: rgba(0,0,0,0.0) !important;
+	box-shadow: none !important;
+}
+
+#sp-header.header-sticky {
+	background: #fff !important;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+#sp-header.header-sticky ~ #sp-main-body {
+	margin-top: 0px !important;
+}
+
+#sp-header ~ #sp-main-body {
+	margin-top: -50px;
+}
+
+.logo {
+	display: none !important;
+}
+
+.header-sticky .logo {
+	display: initial !important;
+}
+
+
+.sp-megamenu-parent > li > a, .sp-megamenu-parent > li > span, .sp-megamenu-parent > li.active > a {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.sp-megamenu-parent > li > a {
+	color: #fff;
+	text-shadow: 2px 2px #000;
+}
+
+.header-sticky .sp-megamenu-parent > li > a {
+	color: #252525;
+	text-shadow:none;
+}
+
+.sp-megamenu-parent > li.active > a, .sp-megamenu-parent > li.active:hover > a, .sp-megamenu-parent > li:hover > a {
+	color: #fff !important;
+} 
+
+.header-sticky .sp-megamenu-parent > li.active > a, .header-sticky .sp-megamenu-parent > li.active:hover > a, .header-sticky .sp-megamenu-parent > li:hover > a {
+	color: #62006F !important;
+} 
+
+
+.sp-megamenu-parent .sp-dropdown-items > li.active > a, .sp-megamenu-parent .sp-dropdown-items > li.active:hover > a, .sp-megamenu-parent .sp-dropdown-items > li:hover > a {
+	color: #62006F !important;
+} 
+
+
+/* Slideshow */
+
+@media screen and (max-width:767px){
+.n2-ss-layers-container.n2-ow {
+	margin: auto !important;
+	height: 100% !important;
+}
+}
+
+/*
+#sp-header.header-sticky ~ #sp-slideshow {
+	margin-top: 101px;
+}*/
+
+
+/* Main Body */
+
+#sp-main-body {
+	padding: 0px !important;
+}
+
+#sp-main-body {
+	margin-top: -50px;
+}
+
+/*Our Services slideshows and fancy borders*/
+
+#sppb-addon-wrapper-1630398441594, #sppb-addon-wrapper-1633518146125 {
+	background-color: #00368C;
+}
+#sppb-addon-wrapper-1630414962467, #sppb-addon-wrapper-1633518146130 {
+	background-color: #0346b1;
+}
+#sppb-addon-wrapper-1630414962429, #sppb-addon-wrapper-1633518146136 {
+	background-color: #468af7;
+}
+
+
+.fancy-border .sppb-carousel-inner, .fancy-border #sppb-addon-1630414962639, .fancy-border #sppb-addon-1630485364160, .fancy-border #sppb-addon-1652349710791, .bckgr-colour, .bckgr-colour a, #section-id-1633819467065 .fancy-border, #sppb-addon-1636360707529 .sppb-img-responsive, #sppb-addon-1635228723248 .sppb-img-responsive, #sppb-addon-1635151856575 .sppb-img-responsive  {
+	transition: ease-in-out 0.5s;
+}
+
+/*Our Services and Pinocchio blocks on Home pg and Community Empowerment Project on What We Do pg*/
+#column-id-1630398441507:hover .fancy-border .sppb-carousel-inner, #column-id-1630398441584:hover .fancy-border .sppb-carousel-inner, #column-id-1630398441585:hover .fancy-border .sppb-carousel-inner {
+	border-radius: 67% 33% 0% 100% / 50% 0% 100% 50%;
+}
+
+#column-id-1633518146123:hover .fancy-border .sppb-carousel-inner, #column-id-1633518146128:hover .fancy-border .sppb-carousel-inner, #column-id-1633518146134:hover .fancy-border .sppb-carousel-inner {
+	border-radius: 67% 33% 0% 100% / 50% 0% 100% 50%;
+}
+
+#section-id-1633819467065 .fancy-border:hover {
+	border-radius: 67% 33% 0% 100% / 50% 0% 100% 50%;
+}
+
+/*Our Funding and CW official name blocks*/
+
+.fancy-border #sppb-addon-1630414962639:hover, .fancy-border #sppb-addon-1630485364160:hover, .fancy-border #sppb-addon-1652349710791:hover {
+	border-radius: 67% 33% 0% 100% / 50% 0% 100% 50%;
+}
+
+
+
+/* Who we are fancy border*/
+
+
+#sppb-addon-1636360707529 .sppb-img-responsive:hover, #sppb-addon-1635228723248 .sppb-img-responsive:hover, #sppb-addon-1635151856575 .sppb-img-responsive:hover {
+	border-radius: 67% 33% 0% 100% / 50% 0% 100% 50%;
+}
+
+/*Be Involved section Home pg*/
+
+.bckgr-colour:hover {
+	transform: translateY(-10px);
+	background-color: #00368C;
+	transition: all 0.25s;
+	box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
+}
+
+.bckgr-colour:hover .sppb-addon-title, .bckgr-colour:hover .sppb-animated-number {
+	color: #F3AD15 !important;
+	font-weight: 600;
+	text-shadow: 1px 1px 3px #000;
+}
+
+.bckgr-colour:hover .sppb-animated-number-title a {
+	color: #fff !important;
+}
+
+.ecw-staff-sl .sppb-avatar-circle {
+	width: 200px !important;
+	height: 300px !important;
+	margin-top: 35px;
+}
+
+.ecw-staff-sl .sppb-addon-testimonial-pro-footer {
+	display: none;
+}
+
+#sppb-addon-wrapper-1646829768938 .sppb-carousel-extended-item, #sppb-addon-wrapper-1646829768938 .sppb-carousel-extended-item:active {
+	height: auto;
+}
+
+#section-id-1644250372374 .nav-control {
+	border: none;
+}
+
+/*Quote rows*/
+
+#section-id-1630414962502 {
+	background-image: url("../../../images/home/protecting-row.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+ #section-id-1630414962681 {
+	background-image: url("../../../images/home/most-important-row.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+ #section-id-1633534324711 {
+	background-image: url("../../../images/what-we-do/centres-pride-row.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+ #section-id-1633703192587 {
+	background-image: url("../../../images/what-we-do/project-seeks.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+ #section-id-1633819071928 {
+	background-image: url("../../../images/what-we-do/operation-areas.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+ #section-id-1635151856607 {
+	background-image: url("../../../images/who-we-are/confidential-nature.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+ #section-id-1635151856664 {
+	background-image: url("../../../images/who-we-are/organisations-work.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+#section-id-1636353375831 {
+	background-image: url("../../../images/contact-us/bank-details.png"), linear-gradient( to right, #00368C, #0346b1, #468af7) !important;
+}
+
+
+/*Get Involved*/
+
+.article-sl-rw {
+	margin-top: -10px !important;
+}
+
+/*
+.dnr-dscrp {
+	height: 550px;
+}*/
+
+.progress {
+	height: 40px !important;
+}
+
+.amount_percent {
+	display: none;
+}
+
+.amount_raized {
+	bottom: 0;
+	color: #62006F;
+}
+
+.donate_button .btn.btn-primary {
+	padding: 5.5px;
+	border-radius: 0px;
+	font-size: 20px;
+	width: 100%;
+}
+
+.itemid-399 .donate_button .btn.btn-primary {
+	float: left;
+	width: 50%;
+}
+
+.btn.btn-primary:hover {
+	background-color: #F4AD15;
+	border-color: #F4AD15;
+}
+
+.dnr-readmr-btn {
+	width: 50% !important;
+	float: right;
+	margin-top: -59px;
+	position: relative;
+	z-index: 9;
+}
+
+.itemid-399 .project_container.DF_Content_plug {
+	position: absolute;
+	bottom: 0;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.itemid-399 #sp-main-body .container {
+	width: 100vw !important;
+	max-width: 100vw !important;
+}
+
+.itemid-399 #sp-component {
+	padding: 0px;
+}
+
+/*Services*/
+
+#section-id-1633352957018 .sppb-flipbox-front.flip-box {
+	background-size: contain !important;
+}
+
+#section-id-1633353352756 .sppb-nav > li {
+	width: 20%;
+}
+
+#section-id-1633353352756 .sppb-nav > li a > img:hover {
+	transform: scale(1.04);
+}
+
+#section-id-1633353352756 .sppb-nav > li > a > img {
+	min-width: 100%;
+	margin: auto;
+	transition: all ease-in-out 0.25s;
+}
+
+#section-id-1633819467065 .sppb-img-responsive {
+	transition: ease-in-out 0.4s;
+}
+
+#section-id-1633819467065 .sppb-img-responsive:hover {
+	transform: rotate(90deg);
+	transition: ease-in-out 0.4s;
+}
+
+/*What We Do*/
+
+/*Social Work section*/
+#sppb-addon-1633353352759 .sppb-addon.sppb-addon-text-block {
+	min-height: 270px;
+}
+
+/*Outreach Programmes section*/
+
+#section-id-1633821900032 .sppb-panel-modern > .sppb-panel-heading {
+	background-image: url("../../../images/what-we-do/grass.jpg");
+	color:#000;
+}
+
+#section-id-1633821900032 .sppb-panel-title {
+	font-size: 26px;
+	text-shadow: 1px 1px 5px #fff;
+}
+
+
+/*Who We Are Staff*/
+
+#sppb-addon-1635231418520 p, #sppb-addon-1635231418462 p {
+	transition: 0.5s;
+}
+
+#sppb-addon-1635231418520 p:hover, #sppb-addon-1635231418462 p:hover {
+	scale: 1.1;
+}
+
+/*Need Help*/
+
+.itemid-397 .sppb-panel-body {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.itemid-397 div.row:nth-child(2n) {
+	background-color: #ccc;
+}
+
+.itemid-397 div.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6:nth-child(odd) {
+	font-weight: 500;
+}
+
+.itemid-397 div.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6:nth-child(even) {
+	text-align: right;
+}
+
+
+.itemid-397 #sppb-addon-1635245753850 div.row, .itemid-397 #sppb-addon-1636228259 div.row, .itemid-397 #sppb-addon-1636228259787 div.row {
+	padding: 5px 20px;
+}
+
+.itemid-397 .sppb-panel-modern > .sppb-panel-heading {
+	background-image: linear-gradient(to right, #00368C, #0346b1, #468af7);
+	color: #fff;
+}
+
+.itemid-397 .sppb-panel-title {
+	font-size: 20px;	
+}
+
+/* Contact Us*/
+
+.sppb-text-center:hover .cnt-link-tel::after {
+	content: "011 452 5940";
+}
+
+.sppb-text-center .cnt-link-tel::after {
+	content: "Telephone";
+}
+
+.sppb-text-center:hover .cnt-link-email::after {
+	content: "administrator@edenvalechildwelfare.co.za";
+}
+
+.sppb-text-center .cnt-link-email::after {
+	content: "E-Mail";
+}
+
+.sppb-text-center:hover .cnt-link-facebook::after {
+	content: "www.facebook.com/edenvalechildwelfare";
+}
+
+.sppb-text-center .cnt-link-facebook::after {
+	content: "Facebook";
+}
+/* responsive */
+
+@media screen and (max-width: 1199px) {
+	.container, .sppb-row-container {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+}
+
+
+#sp-header .burger-icon {
+	background: #fff;
+	padding: 0px 3px;
+}
+
+@media screen and (max-width: 767px) {
+.itemid-397 div.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6:nth-child(2n) {
+	text-align: left !important;
+}
+
+#section-id-1633353352756 .sppb-nav > li > a > img {
+	max-width: 38px !important;
+}
+}
+
+
+/* footer */
+
+
+
+#sp-bottom {
+	background-image: linear-gradient( to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../../images/home/footer.jpg");
+}
+
+/* .sp-copyright {
+	line-height: 50px !important;
+} */
