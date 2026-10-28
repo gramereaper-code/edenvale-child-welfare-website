@@ -183,14 +183,20 @@ textarea { min-height: 150px; resize: vertical; }
 
 @media (max-width: 860px) {
   .menu-toggle { display: block; }
-  .site-nav { display: none; position: absolute; left: 1rem; right: 1rem; top: 84px; padding: .7rem; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: var(--shadow); }
+  .site-header { border-top-width: 5px; }
+  .nav-wrap { min-height: 70px; gap: 1rem; }
+  .brand { min-width: 0; }
+  .brand img { width: min(58vw, 210px); height: auto; }
+  .site-nav { display: none; position: absolute; left: 1rem; right: 1rem; top: calc(100% + 1px); padding: .7rem; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: var(--shadow); }
   .site-nav.is-open { display: block; }
   .site-nav ul { display: grid; }
   .site-nav a { border-radius: 10px; }
   .hero-inner, .split { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-brand { text-align: left; }
-  .hero-brand img { width: 220px; }
-  .hero-brand-details { justify-content: flex-start; }
+  .hero-brand { text-align: center; }
+  .hero-brand img { width: min(66vw, 220px); margin-inline: auto; }
+  .hero-brand-details { justify-content: center; }
+  .hero-copy { text-align: center; }
+  .hero-copy .actions { justify-content: center; }
   .hero { min-height: 700px; }
   .portrait-grid { max-width: 520px; }
   .quick-grid, .card-grid { grid-template-columns: 1fr; }
@@ -200,8 +206,13 @@ textarea { min-height: 150px; resize: vertical; }
 }
 @media (max-width: 540px) {
   .section { padding: 4rem 0; }
-  .hero-inner { padding: 5rem 0 6rem; }
+  .nav-wrap { min-height: 64px; }
+  .menu-toggle { padding: .55rem .75rem; }
+  .hero-inner { padding: 3.75rem 0 5rem; gap: 1.5rem; }
   .hero::before { height: 78%; top: 18%; }
+  .hero-copy h1 { font-size: clamp(2rem, 9vw, 3rem); }
+  .hero-copy .actions { gap: .65rem; }
+  .hero-copy .button { min-height: 46px; padding-inline: 1rem; }
   .icon-grid, .stat-line, .logo-grid { grid-template-columns: 1fr; }
   .staff-grid { grid-template-columns: 1fr; }
   .document-card { align-items: flex-start; flex-direction: column; }
