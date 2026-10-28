@@ -1,0 +1,12 @@
+{
+  "name": "edenvale-child-welfare-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Child Welfare SA Edenvale website and ECW Chatbot",
+  "scripts": {
+    "start": "node pinocchio-server/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
