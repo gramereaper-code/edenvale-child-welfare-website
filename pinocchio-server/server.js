@@ -22,7 +22,9 @@ if (fs.existsSync(envPath)) {
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 const GEMINI_MODEL   = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const PORT           = parseInt(process.env.PORT || "3001", 10);
+const HOST           = process.env.HOST || "127.0.0.1";
 const ALLOWED_ORIGIN = process.env.ASSISTANT_ORIGIN || "http://127.0.0.1:8765";
+const SITE_ROOT      = path.join(__dirname, "..");
 const requestTimes = new Map();
 
 // ── Load knowledge and rules files ───────────────────────────────────────────
@@ -42,6 +44,36 @@ const SYSTEM_PROMPT = `${assistantRules}
 --- APPROVED ORGANIZATION INFORMATION ---
 ${orgKnowledge}
 --- END APPROVED INFORMATION ---`;
+
+const MIME_TYPES = {
+  ".html": "text/html; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp",
+  ".svg": "image/svg+xml",
+  ".pdf": "application/pdf",
+  ".mp4": "video/mp4",
+  ".txt": "text/plain; charset=utf-8",
+};
+
+function serveStatic(req, res) {
+  const requested = decodeURIComponent((req.url || "/").split("?")[0]);
+  const relativePath = requested === "/" ? "index.html" : requested.replace(/^\/+/, "");
+  const filePath = path.resolve(SITE_ROOT, relativePath);
+  if (filePath !== SITE_ROOT && !filePath.startsWith(SITE_ROOT + path.sep)) {
+    res.writeHead(403); res.end("Forbidden"); return;
+  }
+  fs.stat(filePath, (err, stats) => {
+    if (err || !stats.isFile()) { res.writeHead(404); res.end("Not found"); return; }
+    const contentType = MIME_TYPES[path.extname(filePath).toLowerCase()] || "application/octet-stream";
+    res.writeHead(200, { "Content-Type": contentType, "Cache-Control": "no-cache" });
+    fs.createReadStream(filePath).pipe(res);
+  });
+}
 
 // ── Mock responses (used when no API key is set) ──────────────────────────────
 const MOCK_RESPONSES = [
@@ -146,11 +178,16 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  if (req.method === "GET" || req.method === "HEAD") {
+    serveStatic(req, res);
+    return;
+  }
+
   res.writeHead(404);
   res.end("Not found");
 });
 
-server.listen(PORT, "127.0.0.1", () => {
-  console.log(`ECW Chatbot backend running at http://127.0.0.1:${PORT}`);
+server.listen(PORT, HOST, () => {
+  console.log(`ECW Chatbot server running at http://${HOST}:${PORT}`);
   console.log(GEMINI_API_KEY ? `Gemini API configured (${GEMINI_MODEL})` : "Gemini API: not configured (mock mode)");
 });
