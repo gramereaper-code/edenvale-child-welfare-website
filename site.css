@@ -17,8 +17,23 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Segoe UI", Arial, sans-serif; line-height: 1.65; padding-bottom: 5.5rem; }
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none; /* stops the whole page rubber-banding on iOS */
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+  padding-bottom: 5.5rem;
+  overscroll-behavior-y: none;
+}
+body.is-chat-open {
+  overflow: hidden; /* lock background scroll while chatbot is open */
+  touch-action: none;
+}
 body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 20; opacity: .15; background-image: radial-gradient(rgba(0, 54, 140, .14) .55px, transparent .55px); background-size: 8px 8px; }
 img { max-width: 100%; height: auto; }
 a { color: var(--blue-900); }
@@ -220,14 +235,32 @@ textarea { min-height: 150px; resize: vertical; }
   cursor: pointer;
 }
 .pinocchio-avatar { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50% 50% 46% 46%; background: var(--yellow); color: var(--purple); font-weight: 950; box-shadow: inset 0 -4px 0 rgba(90,10,112,.14); }
-.pinocchio-panel { width: min(360px, calc(100vw - 2rem)); margin-bottom: .75rem; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: 0 24px 80px rgba(0, 24, 70, .28); }
+.pinocchio-panel {
+  width: min(360px, calc(100vw - 2rem));
+  margin-bottom: .75rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 24px 80px rgba(0, 24, 70, .28);
+  overscroll-behavior: contain; /* critical – stops scroll chaining to the page */
+}
 .pinocchio-panel[hidden] { display: none; }
 .pinocchio-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1rem .85rem; background: linear-gradient(120deg, var(--blue-950), var(--blue-700)); color: white; }
 .pinocchio-header strong, .pinocchio-header span { display: block; }
 .pinocchio-header span { color: rgba(255,255,255,.75); font-size: .76rem; }
 .pinocchio-close { border: 0; background: transparent; color: white; font-size: 1.6rem; line-height: 1; cursor: pointer; }
 .pinocchio-disclaimer { padding: .75rem 1rem; background: var(--yellow-soft); color: var(--ink); font-size: .78rem; line-height: 1.45; }
-.pinocchio-messages { display: grid; max-height: 250px; gap: .65rem; overflow-y: auto; padding: 1rem; }
+.pinocchio-messages {
+  display: grid;
+  max-height: 250px;
+  gap: .65rem;
+  overflow-y: auto;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain; /* stops the background page moving while scrolling chat */
+  touch-action: pan-y;
+}
 .pinocchio-message { max-width: 88%; padding: .65rem .75rem; border-radius: 14px; line-height: 1.45; white-space: pre-wrap; }
 .pinocchio-message--assistant { justify-self: start; background: var(--wash); color: var(--ink); }
 .pinocchio-message--user { justify-self: end; background: var(--blue-900); color: white; }
@@ -297,7 +330,6 @@ textarea { min-height: 150px; resize: vertical; }
   .icon-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 
-  /* Keep yellow circle away from text on mobile */
   .page-hero {
     padding: 4.5rem 0 5.5rem;
   }
