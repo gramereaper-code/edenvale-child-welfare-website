@@ -27,8 +27,29 @@ a:hover { color: var(--purple); }
 
 .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: .7rem 1rem; border-radius: 999px; background: var(--yellow); color: var(--blue-950); font-weight: 700; }
 .skip-link:focus { top: 1rem; }
-.site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); border-top: 8px solid #151515; border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
-.nav-wrap { width: min(var(--max), calc(100% - 2rem)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+
+/* Sticky header – now respects iOS safe area and removes the awkward top border on mobile */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 8px solid #151515;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.nav-wrap {
+  width: min(var(--max), calc(100% - 2rem));
+  min-height: 76px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
 .brand img { display: block; width: 210px; }
 .menu-toggle { display: none; border: 1px solid var(--line); border-radius: 12px; padding: .65rem .8rem; background: var(--paper); color: var(--blue-900); font: inherit; font-weight: 700; }
 .site-nav ul { display: flex; align-items: center; gap: .15rem; padding: 0; margin: 0; list-style: none; }
@@ -159,7 +180,7 @@ textarea { min-height: 150px; resize: vertical; }
 .staff-card h4 { margin: 0 0 .2rem; color: var(--blue-900); font-size: 1.04rem; line-height: 1.2; }
 .staff-card p { margin: 0; color: var(--purple); font-size: .9rem; font-weight: 750; line-height: 1.4; }
 .staff-card--text { min-height: 100%; border-top: 5px solid var(--yellow); background: linear-gradient(145deg, #fff, #eef4ff); }
-.staff-card__mark { display: grid; width: 52px; height: 52px; place-items: center; margin: 0 0 auto; border-radius: 50%; background: var(--blue-900); color: var(--yellow); font-size: .85rem; font-weight: 900; letter-spacing: .09em; }
+.staff-card__mark { display: grid; width: 52px; height: 52px; place-items: center; margin: 0 0 auto; border-radius: 50%; background: var(--blue-900); color: var(--yellow); font-size: .85rem; letter-spacing: .09em; }
 
 .site-loader {
   position: fixed;
@@ -183,7 +204,10 @@ textarea { min-height: 150px; resize: vertical; }
 
 @media (max-width: 860px) {
   .menu-toggle { display: block; }
-  .site-header { border-top-width: 5px; }
+  .site-header {
+    border-top: none; /* remove the dark top bar that was creating the gap */
+    padding-top: env(safe-area-inset-top, 0px);
+  }
   .nav-wrap { min-height: 70px; gap: 1rem; }
   .brand { min-width: 0; }
   .brand img { width: min(58vw, 210px); height: auto; }
@@ -204,15 +228,26 @@ textarea { min-height: 150px; resize: vertical; }
   .icon-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+
 @media (max-width: 540px) {
   .section { padding: 4rem 0; }
   .nav-wrap { min-height: 64px; }
   .menu-toggle { padding: .55rem .75rem; }
   .hero-inner { padding: 3.75rem 0 5rem; gap: 1.5rem; }
-  .hero::before { height: 78%; top: 18%; }
+  .hero::before { height: 85%; top: 12%; } /* push the white oval lower so buttons sit cleanly on white */
   .hero-copy h1 { font-size: clamp(2rem, 9vw, 3rem); }
-  .hero-copy .actions { gap: .65rem; }
-  .hero-copy .button { min-height: 46px; padding-inline: 1rem; }
+  .hero-copy .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: .65rem;
+    width: 100%;
+  }
+  .hero-copy .button {
+    min-height: 46px;
+    padding-inline: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
   .icon-grid, .stat-line, .logo-grid { grid-template-columns: 1fr; }
   .staff-grid { grid-template-columns: 1fr; }
   .document-card { align-items: flex-start; flex-direction: column; }
@@ -220,6 +255,7 @@ textarea { min-height: 150px; resize: vertical; }
   .pinocchio { right: .65rem; bottom: .65rem; }
   .pinocchio-panel { width: min(360px, calc(100vw - 1.3rem)); }
 }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .site-loader { transition-duration: .01ms !important; }
