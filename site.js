@@ -152,8 +152,20 @@
   var messages = assistantRoot.querySelector(".pinocchio-messages");
   var status = assistantRoot.querySelector(".pinocchio-status");
   var endpoint = window.ECW_CHAT_ENDPOINT || ((window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") ? "http://127.0.0.1:3001/chat" : "/chat");
-  function openAssistant() { panel.hidden = false; launcher.setAttribute("aria-expanded", "true"); input.focus(); }
-  function closeAssistant() { panel.hidden = true; launcher.setAttribute("aria-expanded", "false"); launcher.focus(); }
+
+  function openAssistant() {
+    panel.hidden = false;
+    launcher.setAttribute("aria-expanded", "true");
+    document.body.classList.add("is-chat-open"); // lock background scroll
+    input.focus();
+  }
+  function closeAssistant() {
+    panel.hidden = true;
+    launcher.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("is-chat-open"); // restore scroll
+    launcher.focus();
+  }
+
   function addMessage(text, kind) { var item = document.createElement("div"); item.className = "pinocchio-message pinocchio-message--" + kind; item.textContent = text; messages.appendChild(item); messages.scrollTop = messages.scrollHeight; return item; }
   function typeMessage(text) { var item = addMessage("", "assistant"); var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; if (reduced) { item.textContent = text; return; } var i = 0; function next() { item.textContent = text.slice(0, i); i += 2; messages.scrollTop = messages.scrollHeight; if (i <= text.length) window.setTimeout(next, 10); } next(); }
   async function askEcwChatbot(question) {
