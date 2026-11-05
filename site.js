@@ -5,16 +5,6 @@
   var siteBase = currentScript && currentScript.src
     ? new URL(".", currentScript.src)
     : new URL(".", window.location.href);
-  var alreadyShown = false;
-  try {
-    alreadyShown = window.sessionStorage.getItem("ecw-loader-shown") === "1";
-  } catch (error) {
-    // If storage is unavailable, keep the loader functional for this page view.
-  }
-
-  if (!alreadyShown) {
-    try { window.sessionStorage.setItem("ecw-loader-shown", "1"); } catch (error) {}
-
     var loader = document.createElement("div");
     loader.className = "site-loader";
     loader.setAttribute("role", "status");
@@ -25,7 +15,9 @@
 
     var video = document.createElement("video");
     video.muted = true;
-    video.loop = true;
+    // The exported Liquid Glass animation must play once, then hand off to
+    // the untouched logo before the page is revealed.
+    video.loop = false;
     video.autoplay = true;
     video.playsInline = true;
     video.preload = "metadata";
@@ -35,7 +27,7 @@
     still.className = "site-loader__still";
     still.alt = "";
     still.setAttribute("aria-hidden", "true");
-    still.src = new URL("assets/edenvale-loader-poster.webp", siteBase).href;
+    still.src = new URL("images/logo/logo-br-white.png", siteBase).href;
     video.poster = still.src;
 
     var loadingText = document.createElement("span");
@@ -51,8 +43,16 @@
     var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reducedMotion) {
       loader.classList.add("is-static");
+      window.setTimeout(dismissLoader, 2000);
     } else {
-      video.addEventListener("error", function () { loader.classList.add("is-static"); }, { once: true });
+      video.addEventListener("error", function () {
+        loader.classList.add("is-static");
+        window.setTimeout(dismissLoader, 2000);
+      }, { once: true });
+      video.addEventListener("ended", function () {
+        loader.classList.add("is-static");
+        window.setTimeout(dismissLoader, 2000);
+      }, { once: true });
       video.src = new URL("assets/edenvale-loader.mp4", siteBase).href;
       var playAttempt = video.play();
       if (playAttempt && typeof playAttempt.catch === "function") {
@@ -60,7 +60,6 @@
       }
     }
 
-    var loaderStartedAt = performance.now();
     var loaderDismissed = false;
     function dismissLoader() {
       if (loaderDismissed) return;
@@ -68,14 +67,9 @@
       loader.classList.add("is-leaving");
       window.setTimeout(function () { loader.remove(); }, 360);
     }
-    function afterPageLoad() {
-      var remaining = Math.max(0, 3350 - (performance.now() - loaderStartedAt));
-      window.setTimeout(dismissLoader, remaining);
-    }
-    if (document.readyState === "complete") afterPageLoad();
-    else window.addEventListener("load", afterPageLoad, { once: true });
-  }
-
+    // If the page is already loaded, the video controls the handoff. If the
+    // page is still loading, the ended handler still gives the logo its full
+    // two-second hold before the loader is removed.
   var toggle = document.querySelector("[data-menu-toggle]");
   var nav = document.querySelector("[data-site-nav]");
   if (toggle && nav) {
