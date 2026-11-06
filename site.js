@@ -5,6 +5,15 @@
   var siteBase = currentScript && currentScript.src
     ? new URL(".", currentScript.src)
     : new URL(".", window.location.href);
+  var showLoader = true;
+  try {
+    showLoader = window.sessionStorage.getItem("edenvale-loader-seen") !== "1";
+    if (showLoader) window.sessionStorage.setItem("edenvale-loader-seen", "1");
+  } catch (error) {
+    // If storage is unavailable, keep the loader enabled for this page.
+  }
+
+  if (showLoader) {
     var loader = document.createElement("div");
     loader.className = "site-loader";
     loader.setAttribute("role", "status");
@@ -15,48 +24,36 @@
 
     var video = document.createElement("video");
     video.muted = true;
-    // The exported Liquid Glass animation must play once, then hand off to
-    // the untouched logo before the page is revealed.
+    // The exported Liquid Glass animation plays once before the page is revealed.
     video.loop = false;
     video.autoplay = true;
     video.playsInline = true;
-    video.preload = "metadata";
+    video.preload = "auto";
     video.setAttribute("aria-hidden", "true");
-
-    var still = document.createElement("img");
-    still.className = "site-loader__still";
-    still.alt = "";
-    still.setAttribute("aria-hidden", "true");
-    still.src = new URL("images/logo/logo-br-white.png", siteBase).href;
-    video.poster = still.src;
 
     var loadingText = document.createElement("span");
     loadingText.className = "site-loader__sr-only";
     loadingText.textContent = "Loading Child Welfare South Africa Edenvale";
 
     stage.appendChild(video);
-    stage.appendChild(still);
     loader.appendChild(stage);
     loader.appendChild(loadingText);
     document.body.insertBefore(loader, document.body.firstChild);
 
     var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reducedMotion) {
-      loader.classList.add("is-static");
-      window.setTimeout(dismissLoader, 2000);
+      dismissLoader();
     } else {
       video.addEventListener("error", function () {
-        loader.classList.add("is-static");
-        window.setTimeout(dismissLoader, 2000);
+        dismissLoader();
       }, { once: true });
       video.addEventListener("ended", function () {
-        loader.classList.add("is-static");
-        window.setTimeout(dismissLoader, 2000);
+        dismissLoader();
       }, { once: true });
       video.src = new URL("assets/edenvale-loader.mp4", siteBase).href;
       var playAttempt = video.play();
       if (playAttempt && typeof playAttempt.catch === "function") {
-        playAttempt.catch(function () { loader.classList.add("is-static"); });
+        playAttempt.catch(function () { dismissLoader(); });
       }
     }
 
@@ -67,9 +64,7 @@
       loader.classList.add("is-leaving");
       window.setTimeout(function () { loader.remove(); }, 360);
     }
-    // If the page is already loaded, the video controls the handoff. If the
-    // page is still loading, the ended handler still gives the logo its full
-    // two-second hold before the loader is removed.
+  }
   var toggle = document.querySelector("[data-menu-toggle]");
   var nav = document.querySelector("[data-site-nav]");
   if (toggle && nav) {
