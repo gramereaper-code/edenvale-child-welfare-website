@@ -281,6 +281,9 @@ textarea { min-height: 150px; resize: vertical; }
 .staff-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; }
 .staff-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 12px 28px rgba(0, 46, 118, .08); }
 .staff-card > img { display: block; width: 100%; aspect-ratio: 4 / 4.65; object-fit: cover; object-position: center top; }
+.staff-card--robert > img { object-position: center center; }
+.staff-card--lawrence > img,
+.staff-card--ivan > img { object-position: center center; }
 .staff-card > div { display: flex; min-height: 105px; flex: 1; flex-direction: column; justify-content: flex-end; padding: 1rem; }
 .staff-card h4 { margin: 0 0 .2rem; color: var(--blue-900); font-size: 1.04rem; line-height: 1.2; }
 .staff-card p { margin: 0; color: var(--purple); font-size: .9rem; font-weight: 750; line-height: 1.4; }
