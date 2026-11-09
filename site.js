@@ -65,6 +65,17 @@
       window.setTimeout(function () { loader.remove(); }, 360);
     }
   }
+  var brand = document.querySelector(".brand");
+  var navWrap = brand && brand.parentElement;
+  if (navWrap && !navWrap.querySelector(".brand-pinocchio")) {
+    var pinocchioMark = document.createElement("img");
+    pinocchioMark.className = "brand-pinocchio";
+    pinocchioMark.src = new URL("images/cartoons/pinocchio.png", siteBase).href;
+    pinocchioMark.alt = "";
+    pinocchioMark.setAttribute("aria-hidden", "true");
+    brand.insertAdjacentElement("afterend", pinocchioMark);
+  }
+
   var toggle = document.querySelector("[data-menu-toggle]");
   var nav = document.querySelector("[data-site-nav]");
   if (toggle && nav) {
@@ -120,59 +131,46 @@
     });
   });
 
-  // ECW Chatbot is injected so the static pages share one accessible assistant UI.
-  var assistantRoot = document.createElement("aside");
-  assistantRoot.className = "pinocchio";
-  assistantRoot.innerHTML = '<button class="pinocchio-launcher" type="button" aria-expanded="false" aria-controls="pinocchio-panel"><span class="pinocchio-avatar" aria-hidden="true">E</span><span>Ask ECW Chatbot</span></button>' +
-    '<section class="pinocchio-panel" id="pinocchio-panel" hidden aria-label="ECW Chatbot">' +
-    '<div class="pinocchio-header"><div><strong>ECW Chatbot</strong><span>Child Welfare SA Edenvale</span></div><button class="pinocchio-close" type="button" aria-label="Close ECW Chatbot">×</button></div>' +
-    '<div class="pinocchio-disclaimer">I’m an AI assistant, not a social worker. Please do not share names, addresses, ID numbers or private case details.</div>' +
-    '<div class="pinocchio-messages" aria-live="polite" aria-atomic="false"><div class="pinocchio-message pinocchio-message--assistant">Ask about services, public contact details, support options or Pinocchio Educare Centre.</div></div>' +
-    '<div class="pinocchio-suggestions"><button type="button" data-pinocchio-suggestion>What services do you offer?</button><button type="button" data-pinocchio-suggestion>How can I ask for help?</button><button type="button" data-pinocchio-suggestion>What is Pinocchio Educare Centre?</button></div>' +
-    '<form class="pinocchio-form"><label class="pinocchio-sr-only" for="pinocchio-input">Ask ECW Chatbot a question</label><input id="pinocchio-input" maxlength="1000" autocomplete="off" placeholder="Ask ECW Chatbot…" required><button type="submit" aria-label="Send question">Send</button></form>' +
-    '<div class="pinocchio-status" role="status"></div></section>';
-  document.body.appendChild(assistantRoot);
-
-  var launcher = assistantRoot.querySelector(".pinocchio-launcher");
-  var panel = assistantRoot.querySelector(".pinocchio-panel");
-  var closeButton = assistantRoot.querySelector(".pinocchio-close");
-  var form = assistantRoot.querySelector(".pinocchio-form");
-  var input = assistantRoot.querySelector("#pinocchio-input");
-  var messages = assistantRoot.querySelector(".pinocchio-messages");
-  var status = assistantRoot.querySelector(".pinocchio-status");
-  var endpoint = window.ECW_CHAT_ENDPOINT || ((window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") ? "http://127.0.0.1:3001/chat" : "/chat");
-
-  function openAssistant() {
-    panel.hidden = false;
-    launcher.setAttribute("aria-expanded", "true");
-    document.body.classList.add("is-chat-open"); // lock background scroll
-    input.focus();
-  }
-  function closeAssistant() {
-    panel.hidden = true;
-    launcher.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("is-chat-open"); // restore scroll
-    launcher.focus();
+  function addSpice(parent, file, className) {
+    if (!parent || parent.querySelector("." + className.split(" ")[0] + "." + className.split(" ").slice(1).join("."))) return;
+    var img = document.createElement("img");
+    img.className = className;
+    img.src = new URL("images/Cartoons/" + file, siteBase).href;
+    img.alt = "";
+    img.setAttribute("aria-hidden", "true");
+    img.decoding = "async";
+    parent.appendChild(img);
   }
 
-  function addMessage(text, kind) { var item = document.createElement("div"); item.className = "pinocchio-message pinocchio-message--" + kind; item.textContent = text; messages.appendChild(item); messages.scrollTop = messages.scrollHeight; return item; }
-  function typeMessage(text) { var item = addMessage("", "assistant"); var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; if (reduced) { item.textContent = text; return; } var i = 0; function next() { item.textContent = text.slice(0, i); i += 2; messages.scrollTop = messages.scrollHeight; if (i <= text.length) window.setTimeout(next, 10); } next(); }
-  async function askEcwChatbot(question) {
-    addMessage(question, "user");
-    var typing = addMessage("ECW Chatbot is thinking…", "assistant pinocchio-message--typing");
-    status.textContent = "";
-    try {
-      var response = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: question }) });
-      var data = await response.json();
-      if (!response.ok) throw new Error(data.error || "Assistant unavailable");
-      typing.remove(); typeMessage(data.reply || "I don’t have an answer for that yet. Please contact the Edenvale team.");
-    } catch (error) {
-      typing.textContent = "I’m unable to connect right now. Please call 011 452 5940 for help, or try again when the local assistant server is running.";
-      status.textContent = "Local assistant connection unavailable.";
-    }
+  var hero = document.querySelector(".hero, .page-hero");
+  var sections = document.querySelectorAll("main .section");
+  addSpice(hero, "family-together.svg", "cartoon-spice cartoon-spice--corner cartoon-spice--keep");
+  if (sections[0]) addSpice(sections[0], "children-playground.svg", "cartoon-spice cartoon-spice--left");
+  if (sections[1]) addSpice(sections[1], "family-picnic.svg", "cartoon-spice cartoon-spice--right");
+  if (sections[2]) addSpice(sections[2], "kids-circle.svg", "cartoon-spice cartoon-spice--left");
+
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealNodes = document.querySelectorAll("[data-reveal]");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealNodes.forEach(function (node) { node.classList.add("is-visible"); });
+  } else {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.16, rootMargin: "0px 0px -6% 0px" }
+    );
+    revealNodes.forEach(function (node) { revealObserver.observe(node); });
+    // Hero content should feel present quickly after the loader.
+    window.setTimeout(function () {
+      document.querySelectorAll(".hero [data-reveal]").forEach(function (node) {
+        node.classList.add("is-visible");
+        revealObserver.unobserve(node);
+      });
+    }, 120);
   }
-  launcher.addEventListener("click", function () { panel.hidden ? openAssistant() : closeAssistant(); });
-  closeButton.addEventListener("click", closeAssistant);
-  assistantRoot.querySelectorAll("[data-pinocchio-suggestion]").forEach(function (button) { button.addEventListener("click", function () { openAssistant(); askEcwChatbot(button.textContent); }); });
-  form.addEventListener("submit", function (event) { event.preventDefault(); var question = input.value.trim(); if (!question) return; input.value = ""; askEcwChatbot(question); });
 })();

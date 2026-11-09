@@ -3,3 +3,5 @@
 .env.*
 !.env.example
 *.log
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
